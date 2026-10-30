@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌈 English Fun: Present Simple, Present Continuous &amp; Prepositions 🌈</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff5e8e;
+            --primary-dark: #d83a6c;
+            --secondary: #6c5ce7;
+            --accent: #00b894;
+            --sunshine: #fdcb6e;
+            --bg-top: #fff6f9;
+            --bg-bottom: #f0f7ff;
+            --card: #ffffff;
+            --text: #2d3436;
+            --text-muted: #636e72;
+            --border: #f1e4ee;
+            --success: #00b894;
+            --success-bg: #e8fbf6;
+            --error: #ff7675;
+            --error-bg: #fff0f0;
+            --simple-color: #ff6b81;
+            --simple-bg: #fff0f3;
+            --continuous-color: #5f27cd;
+            --continuous-bg: #f3f0ff;
+            --prep-color: #0097e6;
+            --prep-bg: #eef9ff;
+            --radius: 20px;
+            --radius-sm: 12px;
+            --shadow: 0 6px 20px rgba(108, 92, 231, 0.08);
+            --shadow-hover: 0 12px 28px rgba(255, 94, 142, 0.16);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', 'Comic Neue', sans-serif;
+            background: linear-gradient(160deg, var(--bg-top) 0%, #fdf2f7 45%, var(--bg-bottom) 100%);
+            color: var(--text);
+            line-height: 1.55;
+            margin: 0;
+            padding: 16px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* Hero Header */
+        header {
+            text-align: center;
+            margin-bottom: 18px;
+            padding: 22px 24px;
+            background: linear-gradient(135deg, #ff6b9d 0%, #8e54e9 55%, #4776e6 100%);
+            border-radius: var(--radius);
+            color: white;
+            box-shadow: 0 10px 25px rgba(142, 84, 233, 0.22);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '☁️ ✨ 🎈';
+            position: absolute;
+            top: 10px;
+            left: 18px;
+            font-size: 1.4rem;
+            opacity: 0.45;
+            pointer-events: none;
+        }
+
+        header::after {
+            content: '🌟 🎨 🚀';
+            position: absolute;
+            bottom: 10px;
+            right: 18px;
+            font-size: 1.4rem;
+            opacity: 0.45;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-family: 'Fredoka', cursive, sans-serif;
+            font-size: clamp(1.45rem, 3vw, 2.15rem);
+            margin: 0 0 8px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+            letter-spacing: 0.3px;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            margin: 0;
+            opacity: 0.96;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 6px 16px;
+            border-radius: 999px;
+            backdrop-filter: blur(4px);
+            font-weight: 700;
+        }
+
+        .character {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #ffffff;
+            font-size: 1.25rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Sticky Toolbar: Score, Progress & Topic Filters */
+        .sticky-bar {
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border: 2px solid #f0e1ec;
+            border-radius: 16px;
+            padding: 10px 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 24px rgba(45, 52, 54, 0.08);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .filter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tab-btn {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 0.88rem;
+            border: 2px solid transparent;
+            background: #f5f3f7;
+            color: var(--text);
+            padding: 6px 13px;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-1px);
+            background: #ece7f5;
+        }
+
+        .tab-btn.active {
+            background: var(--secondary);
+            color: white;
+            box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+        }
+
+        .score-panel {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .star-pill {
+            background: linear-gradient(135deg, #fff3bf 0%, #ffe066 100%);
+            color: #7c5800;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 5px 14px;
+            border-radius: 999px;
+            border: 2px solid #ffd43b;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .progress-track {
+            width: 110px;
+            height: 10px;
+            background: #edf2f7;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #00b894, #55efc4);
+            border-radius: 999px;
+            transition: width 0.35s ease;
+        }
+
+        .view-controls {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .action-btn {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 0.82rem;
+            padding: 6px 11px;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            background: white;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary-dark);
+            background: #fff8fa;
+        }
+
+        /* Adaptive Responsive Lesson Grid */
+        .passages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+            gap: 16px;
+            align-items: stretch;
+        }
+
+        .passages-grid.single-col {
+            grid-template-columns: 1fr;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .passages-grid.compact-3col {
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+        }
+
+        /* Individual Lesson Card */
+        .passage {
+            background: var(--card);
+            border-radius: 18px;
+            padding: 16px 18px;
+            box-shadow: var(--shadow);
+            border: 2px solid var(--border);
+            position: relative;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .passage:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .passage[data-category="simple"] {
+            border-top: 5px solid var(--simple-color);
+        }
+
+        .passage[data-category="continuous"] {
+            border-top: 5px solid var(--continuous-color);
+        }
+
+        .passage[data-category="prepositions"] {
+            border-top: 5px solid var(--prep-color);
+        }
+
+        .passage.completed-correct {
+            border-color: #81ecec;
+            background: linear-gradient(180deg, #ffffff 0%, #f7fffe 100%);
+        }
+
+        /* Card Header */
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 0;
+        }
+
+        .passage-number {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fredoka', cursive, sans-serif;
+            font-size: 0.98rem;
+            box-shadow: 0 3px 8px rgba(108, 92, 231, 0.25);
+        }
+
+        h2 {
+            font-family: 'Fredoka', cursive, sans-serif;
+            color: var(--text);
+            font-size: 1.15rem;
+            margin: 0;
+            line-height: 1.25;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .topic-badge {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            padding: 3px 9px;
+            border-radius: 999px;
+        }
+
+        .passage[data-category="simple"] .topic-badge {
+            background: var(--simple-bg);
+            color: var(--simple-color);
+        }
+
+        .passage[data-category="continuous"] .topic-badge {
+            background: var(--continuous-bg);
+            color: var(--continuous-color);
+        }
+
+        .passage[data-category="prepositions"] .topic-badge {
+            background: var(--prep-bg);
+            color: var(--prep-color);
+        }
+
+        .speak-btn {
+            border: none;
+            background: #f3f0ff;
+            color: var(--secondary);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 0.92rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.15s ease, background 0.15s ease;
+        }
+
+        .speak-btn:hover {
+            transform: scale(1.1);
+            background: #e2dbff;
+        }
+
+        /* Compact Side-by-Side Content Row (Kid-Friendly Small Illustration + Text) */
+        .story-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: #faf9fd;
+            border-radius: 14px;
+            border: 1px solid #f0eaf8;
+        }
+
+        .image-container {
+            width: 88px;
+            height: 88px;
+            flex-shrink: 0;
+            margin: 0;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #ffffff;
+            border: 2px solid #f2e8f5;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s ease;
+        }
+
+        .passage:hover .image-container {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            padding: 4px;
+        }
+
+        .passage-text {
+            font-size: 0.98rem;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            border-left: none;
+            flex: 1;
+            color: #343a40;
+        }
+
+        .passage-text p {
+            margin: 0 0 4px;
+        }
+
+        .passage-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .passage-text strong {
+            color: var(--primary-dark);
+            font-weight: 800;
+            background: rgba(255, 94, 142, 0.12);
+            padding: 1px 6px;
+            border-radius: 6px;
+        }
+
+        .passage[data-category="continuous"] .passage-text strong {
+            color: var(--continuous-color);
+            background: rgba(95, 39, 205, 0.1);
+        }
+
+        .passage[data-category="prepositions"] .passage-text strong {
+            color: var(--prep-color);
+            background: rgba(0, 151, 230, 0.11);
+        }
+
+        /* Compact Exercise Area */
+        .exercise {
+            margin-top: auto;
+            padding: 11px 12px;
+            background: linear-gradient(135deg, #fff9fb 0%, #f6f8ff 100%);
+            border-radius: 13px;
+            border: 1.5px dashed #d8c8eb;
+        }
+
+        .question-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .question {
+            font-weight: 800;
+            color: #4a3b7c;
+            font-size: 0.96rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .question::before {
+            content: '❓';
+            font-size: 1rem;
+        }
+
+        .feedback-badge {
+            font-size: 0.78rem;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 999px;
+            display: none;
+        }
+
+        .feedback-badge.correct {
+            display: inline-block;
+            background: var(--success-bg);
+            color: #00896c;
+        }
+
+        .feedback-badge.wrong {
+            display: inline-block;
+            background: var(--error-bg);
+            color: #d63031;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 7px;
+        }
+
+        .options div {
+            background: white;
+            padding: 7px 9px;
+            border-radius: 10px;
+            border: 2px solid #ebe3f2;
+            transition: all 0.18s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        .options div:hover {
+            border-color: var(--primary);
+            background: #fff6fa;
+            transform: translateY(-1px);
+        }
+
+        .options div.selected-correct {
+            border-color: var(--success);
+            background: var(--success-bg);
+            color: #006d57;
+        }
+
+        .options div.selected-wrong {
+            border-color: var(--error);
+            background: var(--error-bg);
+            color: #c0392b;
+        }
+
+        .options input[type="radio"] {
+            margin: 0;
+            accent-color: var(--primary);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .options label {
+            cursor: pointer;
+            flex: 1;
+            user-select: none;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 28px;
+            padding: 22px;
+            background: linear-gradient(135deg, #ff6b9d 0%, #8e54e9 100%);
+            border-radius: var(--radius);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .footer p {
+            font-size: 1.15rem;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .celebration {
+            font-size: 1.65rem;
+            margin-top: 6px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .passages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            body {
+                padding: 10px;
+            }
+            .sticky-bar {
+                padding: 10px 12px;
+            }
+            .story-row {
+                padding: 10px;
+                gap: 10px;
+            }
+            .image-container {
+                width: 72px;
+                height: 72px;
+            }
+            .options {
+                grid-template-columns: 1fr;
+            }
+            h2 {
+                white-space: normal;
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌈 English Fun: Present Simple, Present Continuous &amp; Prepositions 🌈</h1>
+            <p class="subtitle"><span class="character">👧</span> Let's learn together with fun pictures and interactive exercises!</p>
+        </header>
+
+        <!-- Interactive Filter & Score Bar -->
+        <div class="sticky-bar" role="region" aria-label="Lesson controls and score">
+            <div class="filter-tabs" role="tablist" aria-label="Filter passages by grammar topic">
+                <button type="button" class="tab-btn active" data-filter="all">🌟 All (25)</button>
+                <button type="button" class="tab-btn" data-filter="simple">⏰ Present Simple</button>
+                <button type="button" class="tab-btn" data-filter="continuous">🎬 Present Continuous</button>
+                <button type="button" class="tab-btn" data-filter="prepositions">📍 Prepositions</button>
+            </div>
+            <div class="score-panel">
+                <div class="star-pill" id="score-display">⭐ 0 / 25 Stars</div>
+                <div class="progress-track" aria-hidden="true">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="view-controls">
+                    <button type="button" class="action-btn" id="toggle-layout-btn" title="Switch between 2-column and 1-column layout">📐 2-Col View</button>
+                    <button type="button" class="action-btn" id="reset-btn" title="Clear all answers and start again">🔄 Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="passages-grid" id="passages-grid">
+            <!-- Passage 1 -->
+            <div class="passage" data-id="1" data-category="simple" data-answer="b">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">1</div>
+                        <h2>Present Simple: Daily Routines</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Routine</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 1">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-1" alt="Lily's daily routine"></div>
+                    <div class="passage-text"><p>My name is Lily. I <strong>wake up</strong> at 7:00 AM every day. I <strong>brush my teeth</strong> and <strong>have breakfast</strong>. Then I <strong>go to school</strong> by bus. At school, I <strong>read</strong> books, <strong>write</strong> stories, and <strong>play</strong> with my friends.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What does Lily do every day?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q1-a" name="q1" value="a"><label for="q1-a">She plays football</label></div>
+                        <div><input type="radio" id="q1-b" name="q1" value="b"><label for="q1-b">She wakes up at 7:00 AM</label></div>
+                        <div><input type="radio" id="q1-c" name="q1" value="c"><label for="q1-c">She goes to school by car</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 2 -->
+            <div class="passage" data-id="2" data-category="continuous" data-answer="b">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">2</div>
+                        <h2>Present Continuous: What's Happening Now?</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Now</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 2">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-2" alt="Lily drawing"></div>
+                    <div class="passage-text"><p>Look! Lily <strong>is drawing</strong> a picture. She <strong>is using</strong> colored pencils. Her friend Tom <strong>is running</strong> outside. The sun <strong>is shining</strong> brightly. The birds <strong>are singing</strong> in the trees.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What is Lily doing?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q2-a" name="q2" value="a"><label for="q2-a">She is sleeping</label></div>
+                        <div><input type="radio" id="q2-b" name="q2" value="b"><label for="q2-b">She is drawing</label></div>
+                        <div><input type="radio" id="q2-c" name="q2" value="c"><label for="q2-c">She is eating</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 3 -->
+            <div class="passage" data-id="3" data-category="prepositions" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">3</div>
+                        <h2>Prepositions: Where Is It?</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Place</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 3">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-3" alt="Room with prepositions"></div>
+                    <div class="passage-text"><p>Lily is <strong>in</strong> the kitchen. The cat is <strong>on</strong> the table. The ball is <strong>under</strong> the chair. The book is <strong>next to</strong> the lamp. The dog is <strong>beside</strong> the door.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">Where is the cat?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q3-a" name="q3" value="a"><label for="q3-a">on the table</label></div>
+                        <div><input type="radio" id="q3-b" name="q3" value="b"><label for="q3-b">in the kitchen</label></div>
+                        <div><input type="radio" id="q3-c" name="q3" value="c"><label for="q3-c">under the chair</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 4 -->
+            <div class="passage" data-id="4" data-category="continuous" data-answer="b">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">4</div>
+                        <h2>Present Simple vs Present Continuous</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Compare</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 4">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-4" alt="Chocolate and action"></div>
+                    <div class="passage-text">
+                        <p>I <strong>like</strong> chocolate. (Present Simple - general truth)</p>
+                        <p>I <strong>am eating</strong> chocolate now. (Present Continuous - happening now)</p>
+                        <p>My brother <strong>plays</strong> football every Saturday. (Present Simple - habit)</p>
+                        <p>My brother <strong>is playing</strong> football right now. (Present Continuous - action now)</p>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">Which sentence is for something happening now?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q4-a" name="q4" value="a"><label for="q4-a">I like chocolate</label></div>
+                        <div><input type="radio" id="q4-b" name="q4" value="b"><label for="q4-b">I am eating chocolate</label></div>
+                        <div><input type="radio" id="q4-c" name="q4" value="c"><label for="q4-c">My brother plays football</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 5 -->
+            <div class="passage" data-id="5" data-category="prepositions" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">5</div>
+                        <h2>Prepositions Adventure</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Movement</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 5">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-5" alt="Park adventure"></div>
+                    <div class="passage-text"><p>Tom <strong>is walking</strong> <strong>to</strong> the park. He <strong>goes</strong> <strong>through</strong> the gate. He <strong>jumps over</strong> the fence. He <strong>looks at</strong> the flowers. He <strong>is near</strong> the pond.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">Where is Tom walking?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q5-a" name="q5" value="a"><label for="q5-a">to the park</label></div>
+                        <div><input type="radio" id="q5-b" name="q5" value="b"><label for="q5-b">through the gate</label></div>
+                        <div><input type="radio" id="q5-c" name="q5" value="c"><label for="q5-c">over the fence</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 6 -->
+            <div class="passage" data-id="6" data-category="simple" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">6</div>
+                        <h2>Present Simple: Hobbies</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Hobbies</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 6">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-6" alt="Hobbies"></div>
+                    <div class="passage-text"><p>Tom <strong>loves</strong> playing football. He <strong>plays</strong> every weekend. His sister <strong>reads</strong> books. She <strong>reads</strong> in the library. My friends <strong>like</strong> drawing pictures.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What does Tom love?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q6-a" name="q6" value="a"><label for="q6-a">playing football</label></div>
+                        <div><input type="radio" id="q6-b" name="q6" value="b"><label for="q6-b">reading books</label></div>
+                        <div><input type="radio" id="q6-c" name="q6" value="c"><label for="q6-c">drawing pictures</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 7 -->
+            <div class="passage" data-id="7" data-category="continuous" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">7</div>
+                        <h2>Present Continuous: Actions Now</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Actions</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 7">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-7" alt="Actions now"></div>
+                    <div class="passage-text"><p>The dog <strong>is barking</strong>. The cat <strong>is sleeping</strong>. The baby <strong>is crying</strong>. The birds <strong>are flying</strong>. The children <strong>are playing</strong> in the garden.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What is the dog doing?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q7-a" name="q7" value="a"><label for="q7-a">is barking</label></div>
+                        <div><input type="radio" id="q7-b" name="q7" value="b"><label for="q7-b">is sleeping</label></div>
+                        <div><input type="radio" id="q7-c" name="q7" value="c"><label for="q7-c">is crying</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 8 -->
+            <div class="passage" data-id="8" data-category="prepositions" data-answer="c">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">8</div>
+                        <h2>Prepositions: Location</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Location</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 8">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-8" alt="Location"></div>
+                    <div class="passage-text"><p>The book is <strong>on</strong> the shelf. The cup is <strong>in</strong> the cupboard. The shoes are <strong>under</strong> the bed. The picture is <strong>above</strong> the fireplace. The toy is <strong>behind</strong> the sofa.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">Where are the shoes?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q8-a" name="q8" value="a"><label for="q8-a">on the shelf</label></div>
+                        <div><input type="radio" id="q8-b" name="q8" value="b"><label for="q8-b">in the cupboard</label></div>
+                        <div><input type="radio" id="q8-c" name="q8" value="c"><label for="q8-c">under the bed</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 9 -->
+            <div class="passage" data-id="9" data-category="simple" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">9</div>
+                        <h2>Present Simple: Family</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Family</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 9">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-9" alt="Family"></div>
+                    <div class="passage-text"><p>My mom <strong>works</strong> at a hospital. My dad <strong>drives</strong> a bus. My sister <strong>studies</strong> at university. My brother <strong>plays</strong> guitar. We <strong>live</strong> in a big house.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">Where does mom work?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q9-a" name="q9" value="a"><label for="q9-a">at a hospital</label></div>
+                        <div><input type="radio" id="q9-b" name="q9" value="b"><label for="q9-b">at a school</label></div>
+                        <div><input type="radio" id="q9-c" name="q9" value="c"><label for="q9-c">at home</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 10 -->
+            <div class="passage" data-id="10" data-category="continuous" data-answer="b">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">10</div>
+                        <h2>Present Continuous: Weather</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Weather</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 10">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-10" alt="Weather"></div>
+                    <div class="passage-text"><p>It <strong>is raining</strong> outside. The wind <strong>is blowing</strong>. The sun <strong>is shining</strong> through the clouds. The children <strong>are running</strong> home. The trees <strong>are moving</strong> in the wind.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What is happening outside?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q10-a" name="q10" value="a"><label for="q10-a">It is snowing</label></div>
+                        <div><input type="radio" id="q10-b" name="q10" value="b"><label for="q10-b">It is raining</label></div>
+                        <div><input type="radio" id="q10-c" name="q10" value="c"><label for="q10-c">It is sunny</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 11 -->
+            <div class="passage" data-id="11" data-category="prepositions" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">11</div>
+                        <h2>Prepositions: Time &amp; Place</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Time</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 11">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-11" alt="Time and place"></div>
+                    <div class="passage-text"><p>We eat breakfast <strong>in</strong> the morning. We sleep <strong>at</strong> night. The meeting is <strong>on</strong> Monday. The party is <strong>in</strong> the garden. The train leaves <strong>at</strong> 3 o'clock.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">When do we eat breakfast?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q11-a" name="q11" value="a"><label for="q11-a">in the morning</label></div>
+                        <div><input type="radio" id="q11-b" name="q11" value="b"><label for="q11-b">at night</label></div>
+                        <div><input type="radio" id="q11-c" name="q11" value="c"><label for="q11-c">on Monday</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 12 -->
+            <div class="passage" data-id="12" data-category="simple" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">12</div>
+                        <h2>Present Simple: School</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">School</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 12">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-12" alt="School"></div>
+                    <div class="passage-text"><p>Students <strong>learn</strong> English. Teachers <strong>teach</strong> math. The bell <strong>rings</strong> at 8:00. Children <strong>play</strong> in the playground. We <strong>have</strong> lunch at 12:00.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What do students learn?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q12-a" name="q12" value="a"><label for="q12-a">English</label></div>
+                        <div><input type="radio" id="q12-b" name="q12" value="b"><label for="q12-b">Math</label></div>
+                        <div><input type="radio" id="q12-c" name="q12" value="c"><label for="q12-c">Science</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 13 -->
+            <div class="passage" data-id="13" data-category="continuous" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">13</div>
+                        <h2>Present Continuous: Friends</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Friends</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 13">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-13" alt="Friends"></div>
+                    <div class="passage-text"><p>Sarah <strong>is singing</strong> a song. Mark <strong>is dancing</strong>. Emma <strong>is reading</strong> a book. Jake <strong>is writing</strong> a letter. They <strong>are having</strong> fun together.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What is Sarah doing?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q13-a" name="q13" value="a"><label for="q13-a">is singing</label></div>
+                        <div><input type="radio" id="q13-b" name="q13" value="b"><label for="q13-b">is dancing</label></div>
+                        <div><input type="radio" id="q13-c" name="q13" value="c"><label for="q13-c">is reading</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 14 -->
+            <div class="passage" data-id="14" data-category="prepositions" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">14</div>
+                        <h2>Prepositions: Direction</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Direction</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 14">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-14" alt="Direction"></div>
+                    <div class="passage-text"><p>The boy walks <strong>to</strong> school. The bird flies <strong>over</strong> the house. The fish swims <strong>through</strong> the water. The car goes <strong>past</strong> the shop. The ball rolls <strong>down</strong> the hill.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">Where does the boy walk?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q14-a" name="q14" value="a"><label for="q14-a">to school</label></div>
+                        <div><input type="radio" id="q14-b" name="q14" value="b"><label for="q14-b">over the house</label></div>
+                        <div><input type="radio" id="q14-c" name="q14" value="c"><label for="q14-c">through the water</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 15 -->
+            <div class="passage" data-id="15" data-category="simple" data-answer="b">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">15</div>
+                        <h2>Present Simple: Animals</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Animals</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 15">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-15" alt="Animals"></div>
+                    <div class="passage-text"><p>Lions <strong>roar</strong>. Birds <strong>sing</strong>. Dogs <strong>bark</strong>. Cats <strong>meow</strong>. Fish <strong>swim</strong>. Snakes <strong>hiss</strong>.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What do dogs do?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q15-a" name="q15" value="a"><label for="q15-a">roar</label></div>
+                        <div><input type="radio" id="q15-b" name="q15" value="b"><label for="q15-b">bark</label></div>
+                        <div><input type="radio" id="q15-c" name="q15" value="c"><label for="q15-c">meow</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 16 -->
+            <div class="passage" data-id="16" data-category="continuous" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">16</div>
+                        <h2>Present Continuous: Kitchen</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Kitchen</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 16">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-16" alt="Kitchen"></div>
+                    <div class="passage-text"><p>Mom <strong>is cooking</strong> dinner. Dad <strong>is washing</strong> dishes. Sister <strong>is setting</strong> the table. Brother <strong>is cutting</strong> vegetables. I <strong>am helping</strong> them.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What is mom doing?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q16-a" name="q16" value="a"><label for="q16-a">is cooking</label></div>
+                        <div><input type="radio" id="q16-b" name="q16" value="b"><label for="q16-b">is washing</label></div>
+                        <div><input type="radio" id="q16-c" name="q16" value="c"><label for="q16-c">is setting</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 17 -->
+            <div class="passage" data-id="17" data-category="prepositions" data-answer="b">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">17</div>
+                        <h2>Prepositions: Around Home</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Home</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 17">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-17" alt="Around home"></div>
+                    <div class="passage-text"><p>The lamp is <strong>near</strong> the bed. The mirror is <strong>opposite</strong> the door. The carpet is <strong>under</strong> the table. The clock is <strong>on</strong> the wall. The shoes are <strong>by</strong> the door.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">Where is the mirror?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q17-a" name="q17" value="a"><label for="q17-a">near the bed</label></div>
+                        <div><input type="radio" id="q17-b" name="q17" value="b"><label for="q17-b">opposite the door</label></div>
+                        <div><input type="radio" id="q17-c" name="q17" value="c"><label for="q17-c">under the table</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 18 -->
+            <div class="passage" data-id="18" data-category="simple" data-answer="b">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">18</div>
+                        <h2>Present Simple: Sports</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Sports</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 18">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-18" alt="Sports"></div>
+                    <div class="passage-text"><p>Boys <strong>play</strong> football. Girls <strong>play</strong> basketball. Children <strong>swim</strong> in the pool. Adults <strong>run</strong> in the park. Everyone <strong>enjoys</strong> sports.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What do girls play?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q18-a" name="q18" value="a"><label for="q18-a">football</label></div>
+                        <div><input type="radio" id="q18-b" name="q18" value="b"><label for="q18-b">basketball</label></div>
+                        <div><input type="radio" id="q18-c" name="q18" value="c"><label for="q18-c">tennis</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 19 -->
+            <div class="passage" data-id="19" data-category="continuous" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">19</div>
+                        <h2>Present Continuous: Playground</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Playground</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 19">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-19" alt="Playground"></div>
+                    <div class="passage-text"><p>Children <strong>are swinging</strong> on the swings. Boys <strong>are sliding</strong> down the slide. Girls <strong>are jumping</strong> rope. A baby <strong>is crawling</strong>. Parents <strong>are watching</strong>.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What are children doing?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q19-a" name="q19" value="a"><label for="q19-a">are swinging</label></div>
+                        <div><input type="radio" id="q19-b" name="q19" value="b"><label for="q19-b">are sliding</label></div>
+                        <div><input type="radio" id="q19-c" name="q19" value="c"><label for="q19-c">are jumping</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 20 -->
+            <div class="passage" data-id="20" data-category="prepositions" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">20</div>
+                        <h2>Prepositions: In the Park</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Park</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 20">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-20" alt="In the park"></div>
+                    <div class="passage-text"><p>We sit <strong>on</strong> the bench. We walk <strong>along</strong> the path. We play <strong>near</strong> the fountain. We feed ducks <strong>by</strong> the pond. We rest <strong>under</strong> the trees.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">Where do we sit?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q20-a" name="q20" value="a"><label for="q20-a">on the bench</label></div>
+                        <div><input type="radio" id="q20-b" name="q20" value="b"><label for="q20-b">along the path</label></div>
+                        <div><input type="radio" id="q20-c" name="q20" value="c"><label for="q20-c">near the fountain</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 21 -->
+            <div class="passage" data-id="21" data-category="simple" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">21</div>
+                        <h2>Present Simple: Food</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Food</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 21">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-21" alt="Food"></div>
+                    <div class="passage-text"><p>I <strong>eat</strong> breakfast at 8:00. I <strong>drink</strong> milk. I <strong>like</strong> apples. I <strong>don't like</strong> spicy food. I <strong>have</strong> dinner with my family.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What does she drink?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q21-a" name="q21" value="a"><label for="q21-a">milk</label></div>
+                        <div><input type="radio" id="q21-b" name="q21" value="b"><label for="q21-b">juice</label></div>
+                        <div><input type="radio" id="q21-c" name="q21" value="c"><label for="q21-c">water</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 22 -->
+            <div class="passage" data-id="22" data-category="continuous" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">22</div>
+                        <h2>Present Continuous: Hospital</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Helping</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 22">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-22" alt="Hospital"></div>
+                    <div class="passage-text"><p>The doctor <strong>is examining</strong> a patient. The nurse <strong>is giving</strong> medicine. The patient <strong>is resting</strong>. The ambulance <strong>is arriving</strong>. The staff <strong>is helping</strong> everyone.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What is the doctor doing?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q22-a" name="q22" value="a"><label for="q22-a">is examining</label></div>
+                        <div><input type="radio" id="q22-b" name="q22" value="b"><label for="q22-b">is giving</label></div>
+                        <div><input type="radio" id="q22-c" name="q22" value="c"><label for="q22-c">is resting</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 23 -->
+            <div class="passage" data-id="23" data-category="prepositions" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">23</div>
+                        <h2>Prepositions: School Supplies</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Supplies</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 23">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-23" alt="School supplies"></div>
+                    <div class="passage-text"><p>The pencil is <strong>in</strong> the case. The eraser is <strong>on</strong> the desk. The ruler is <strong>next to</strong> the book. The glue is <strong>behind</strong> the pen. The paper is <strong>under</strong> the laptop.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">Where is the pencil?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q23-a" name="q23" value="a"><label for="q23-a">in the case</label></div>
+                        <div><input type="radio" id="q23-b" name="q23" value="b"><label for="q23-b">on the desk</label></div>
+                        <div><input type="radio" id="q23-c" name="q23" value="c"><label for="q23-c">next to the book</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 24 -->
+            <div class="passage" data-id="24" data-category="simple" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">24</div>
+                        <h2>Present Simple: Transportation</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Travel</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 24">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-24" alt="Transportation"></div>
+                    <div class="passage-text"><p>I <strong>walk</strong> to school. My mom <strong>drives</strong> a car. My dad <strong>takes</strong> the bus. My sister <strong>rides</strong> a bike. We <strong>travel</strong> by train.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">How does my sister travel?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q24-a" name="q24" value="a"><label for="q24-a">rides a bike</label></div>
+                        <div><input type="radio" id="q24-b" name="q24" value="b"><label for="q24-b">drives a car</label></div>
+                        <div><input type="radio" id="q24-c" name="q24" value="c"><label for="q24-c">takes the bus</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passage 25 -->
+            <div class="passage" data-id="25" data-category="continuous" data-answer="a">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="passage-number">25</div>
+                        <h2>Present Continuous: Beach</h2>
+                    </div>
+                    <div class="header-actions">
+                        <span class="topic-badge">Beach</span>
+                        <button type="button" class="speak-btn" title="Listen to passage" aria-label="Listen to passage 25">🔊</button>
+                    </div>
+                </div>
+                <div class="story-row">
+                    <div class="image-container"><img id="img-25" alt="Beach"></div>
+                    <div class="passage-text"><p>Children <strong>are building</strong> sandcastles. People <strong>are swimming</strong>. Families <strong>are sunbathing</strong>. Waves <strong>are crashing</strong>. Seagulls <strong>are flying</strong>.</p></div>
+                </div>
+                <div class="exercise">
+                    <div class="question-row">
+                        <p class="question">What are children doing?</p>
+                        <span class="feedback-badge"></span>
+                    </div>
+                    <div class="options">
+                        <div><input type="radio" id="q25-a" name="q25" value="a"><label for="q25-a">are building</label></div>
+                        <div><input type="radio" id="q25-b" name="q25" value="b"><label for="q25-b">are swimming</label></div>
+                        <div><input type="radio" id="q25-c" name="q25" value="c"><label for="q25-c">are sunbathing</label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p id="footer-msg">Great job! Keep practicing English with fun activities! 🌈</p>
+            <div class="celebration">🎉✨🌟💖</div>
+        </div>
+    </div>
+
+    <script>
+        // Kid-friendly compact SVG cartoon illustrations tailored to each of the 25 passages
+        const sceneIllustrations = {
+            1: { bg: ['#FFF3BF', '#FFD8A8'], main: '🚌', top: '☀️', bottom: '🎒', accent: '#FF922B' },
+            2: { bg: ['#F3D9FA', '#E5DBFF'], main: '🎨', top: '🖍️', bottom: '🌈', accent: '#9775FA' },
+            3: { bg: ['#FFE3E3', '#FFC9C9'], main: '🐱', top: '🪑', bottom: '⚽', accent: '#FF6B6B' },
+            4: { bg: ['#D3F9D8', '#B2F2BB'], main: '🍫', top: '⚽', bottom: '😋', accent: '#51CF66' },
+            5: { bg: ['#D0EBFF', '#A5D8FF'], main: '🌳', top: '🌷', bottom: '🦆', accent: '#339AF0' },
+            6: { bg: ['#E7F5FF', '#D0EBFF'], main: '⚽', top: '📚', bottom: '🖌️', accent: '#228BE6' },
+            7: { bg: ['#FFF0F6', '#FFDEEB'], main: '🐶', top: '🐱', bottom: '🐦', accent: '#F06595' },
+            8: { bg: ['#F8F0FC', '#F3D9FA'], main: '👟', top: '🛏️', bottom: '🧸', accent: '#CC5DE8' },
+            9: { bg: ['#E6FCF5', '#C3FAE8'], main: '🏥', top: '🚌', bottom: '🎸', accent: '#20C997' },
+            10: { bg: ['#E7F5FF', '#BDE0FE'], main: '🌧️', top: '⛅', bottom: '☂️', accent: '#4DABF7' },
+            11: { bg: ['#FFF9DB', '#FFF3BF'], main: '⏰', top: '🥞', bottom: '🚂', accent: '#FCC419' },
+            12: { bg: ['#FFF4E6', '#FFE8CC'], main: '🏫', top: '🔔', bottom: '📖', accent: '#FD7E14' },
+            13: { bg: ['#F3F0FF', '#E5DBFF'], main: '🎤', top: '🎵', bottom: '💃', accent: '#845EF7' },
+            14: { bg: ['#E3FAFC', '#C5F6FA'], main: '🐦', top: '🏠', bottom: '🐟', accent: '#15AABF' },
+            15: { bg: ['#FFF9DB', '#FFEC99'], main: '🦁', top: '🐶', bottom: '🐱', accent: '#FAB005' },
+            16: { bg: ['#FFE8CC', '#FFD8A8'], main: '👩‍🍳', top: '🍲', bottom: '🥕', accent: '#F76707' },
+            17: { bg: ['#F3D9FA', '#EEBEFA'], main: '🛋️', top: '🪞', bottom: '🕰️', accent: '#AE3EC9' },
+            18: { bg: ['#EBFBEE', '#D3F9D8'], main: '🏀', top: '🏊', bottom: '🏃', accent: '#40C057' },
+            19: { bg: ['#FFF0F6', '#FCC2D7'], main: '🛝', top: '🎠', bottom: '🎈', accent: '#E64980' },
+            20: { bg: ['#E6FCF5', '#96F2D7'], main: '🦆', top: '⛲', bottom: '🌳', accent: '#12B886' },
+            21: { bg: ['#FFF5F5', '#FFE3E3'], main: '🍎', top: '🥛', bottom: '🍽️', accent: '#FA5252' },
+            22: { bg: ['#E7F5FF', '#A5D8FF'], main: '🩺', top: '🚑', bottom: '💊', accent: '#1C7ED6' },
+            23: { bg: ['#FFF9DB', '#FFE066'], main: '✏️', top: '📏', bottom: '💻', accent: '#F59F00' },
+            24: { bg: ['#F3F0FF', '#D0BFFF'], main: '🚲', top: '🚗', bottom: '🚆', accent: '#7950F2' },
+            25: { bg: ['#E3FAFC', '#99E9F2'], main: '🏖️', top: '🏰', bottom: '🌊', accent: '#0CA678' }
+        };
+
+        function createKidSvgDataUri(id) {
+            const cfg = sceneIllustrations[id];
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+                <defs>
+                    <linearGradient id="g${id}" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="${cfg.bg[0]}"/>
+                        <stop offset="100%" stop-color="${cfg.bg[1]}"/>
+                    </linearGradient>
+                </defs>
+                <rect width="120" height="120" rx="22" fill="url(#g${id})"/>
+                <circle cx="96" cy="24" r="18" fill="#ffffff" fill-opacity="0.65"/>
+                <circle cx="24" cy="94" r="18" fill="#ffffff" fill-opacity="0.65"/>
+                <circle cx="60" cy="60" r="34" fill="#ffffff" fill-opacity="0.82" stroke="${cfg.accent}" stroke-width="2.5" stroke-dasharray="5 4"/>
+                <text x="96" y="31" font-size="20" text-anchor="middle">${cfg.top}</text>
+                <text x="24" y="101" font-size="20" text-anchor="middle">${cfg.bottom}</text>
+                <text x="60" y="75" font-size="42" text-anchor="middle">${cfg.main}</text>
+            </svg>`;
+            return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+        }
+
+        // Populate all 25 compact kid-friendly SVG illustrations
+        for (let i = 1; i <= 25; i++) {
+            const imgEl = document.getElementById(`img-${i}`);
+            if (imgEl) {
+                imgEl.src = createKidSvgDataUri(i);
+            }
+        }
+
+        // Interactive Quiz & Score Logic
+        const passages = document.querySelectorAll('.passage');
+        const scoreDisplay = document.getElementById('score-display');
+        const progressFill = document.getElementById('progress-fill');
+        const footerMsg = document.getElementById('footer-msg');
+
+        function updateScore() {
+            const total = passages.length;
+            const correctCount = document.querySelectorAll('.passage.completed-correct').length;
+            scoreDisplay.textContent = `⭐ ${correctCount} / ${total} Stars`;
+            progressFill.style.width = `${(correctCount / total) * 100}%`;
+
+            if (correctCount === total) {
+                footerMsg.textContent = '🏆 Amazing! You got all 25 Stars! You are an English Superstar! 🌈';
+            } else if (correctCount >= 15) {
+                footerMsg.textContent = `🌟 Super job! You have ${correctCount} stars! Almost at the finish line! 🌈`;
+            } else {
+                footerMsg.textContent = 'Great job! Keep practicing English with fun activities! 🌈';
+            }
+        }
+
+        passages.forEach((passage) => {
+            const correctAns = passage.dataset.answer;
+            const optionRows = passage.querySelectorAll('.options > div');
+            const feedbackBadge = passage.querySelector('.feedback-badge');
+            const speakBtn = passage.querySelector('.speak-btn');
+            const passageText = passage.querySelector('.passage-text');
+
+            optionRows.forEach((row) => {
+                const radio = row.querySelector('input[type="radio"]');
+
+                // Allow clicking anywhere on the option pill
+                row.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'LABEL') {
+                        radio.checked = true;
+                        radio.dispatchEvent(new Event('change'));
+                    }
+                });
+
+                radio.addEventListener('change', () => {
+                    optionRows.forEach((r) => r.classList.remove('selected-correct', 'selected-wrong'));
+
+                    if (radio.value === correctAns) {
+                        row.classList.add('selected-correct');
+                        passage.classList.add('completed-correct');
+                        feedbackBadge.textContent = '✅ Great job! +1 ⭐';
+                        feedbackBadge.className = 'feedback-badge correct';
+                    } else {
+                        row.classList.add('selected-wrong');
+                        passage.classList.remove('completed-correct');
+                        feedbackBadge.textContent = '💡 Try again!';
+                        feedbackBadge.className = 'feedback-badge wrong';
+                    }
+                    updateScore();
+                });
+            });
+
+            // Read-aloud button for kid-friendly audio support
+            if (speakBtn && passageText) {
+                speakBtn.addEventListener('click', () => {
+                    if (!('speechSynthesis' in window)) return;
+                    window.speechSynthesis.cancel();
+                    const utterance = new SpeechSynthesisUtterance(passageText.innerText);
+                    utterance.lang = 'en-US';
+                    utterance.rate = 0.92;
+                    utterance.pitch = 1.1;
+                    window.speechSynthesis.speak(utterance);
+                });
+            }
+        });
+
+        // Topic Filter Tabs
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                tabButtons.forEach((b) => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+
+                passages.forEach((p) => {
+                    if (filter === 'all' || p.dataset.category === filter) {
+                        p.style.display = 'flex';
+                    } else {
+                        p.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Toggle 2-Col / 1-Col View
+        const gridEl = document.getElementById('passages-grid');
+        const toggleLayoutBtn = document.getElementById('toggle-layout-btn');
+        toggleLayoutBtn.addEventListener('click', () => {
+            const isSingle = gridEl.classList.toggle('single-col');
+            toggleLayoutBtn.textContent = isSingle ? '📐 1-Col View' : '📐 2-Col View';
+        });
+
+        // Reset Button
+        document.getElementById('reset-btn').addEventListener('click', () => {
+            document.querySelectorAll('input[type="radio"]').forEach((r) => {
+                r.checked = false;
+            });
+            document.querySelectorAll('.options > div').forEach((d) => {
+                d.classList.remove('selected-correct', 'selected-wrong');
+            });
+            document.querySelectorAll('.feedback-badge').forEach((f) => {
+                f.className = 'feedback-badge';
+                f.textContent = '';
+            });
+            passages.forEach((p) => p.classList.remove('completed-correct'));
+            updateScore();
+        });
+    </script>
+</body>
+</html>
